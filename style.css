@@ -147,7 +147,7 @@ li {
     width: 100%;
     max-width: 1200px;
     margin: 0px auto 0px auto;
-
+    margin-bottom: 0px;
   }
   
   .row__column {
@@ -220,7 +220,7 @@ button:active {
 } 
 
 .container {
-    padding: 56px 0;
+    padding: 56px 0 56px 0;
   }
 
 .row {
