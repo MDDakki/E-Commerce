@@ -156,6 +156,14 @@ li {
     align-items: center;
   }
 
+  .entdek {
+    margin-bottom: 32px;
+  }
+
+  .space {
+    margin-top: 32px;
+  }
+
 /* Landung */ 
 
 #Landung {
@@ -186,7 +194,6 @@ h1 {
 h2 {
     text-align: center;
     font-size: 24px;
-    margin-bottom: 32px;
 }
 
  
@@ -478,25 +485,18 @@ footer {
     min-height: 100vh;
   }
 
-  #books__body {
-    background-color: rgba(115, 66, 214, 0.1);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
   #books__main {
     flex: 1;
   }
   
-  .books__header {
+  .buch__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
   }
   
-  .books__header--title {
+  .buch__header--title {
     margin-bottom: 0;
   }
   
