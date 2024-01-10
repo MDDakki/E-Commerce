@@ -55,11 +55,11 @@
               Alle <span class="purple">Bücher</span>
             </h2>
         </div>
-          <select id="filter">
-            <option value="" disabled selected></option>
-            <option value="hochsteigend" disabled selected>hochsteigend</option>
-            <option value="absteigend" disabled selected>absteigend</option>
-            <option value="Bewertung" disabled selected>Bewertung</option>
+          <select id="filter" onchange="BuchFilter()">
+            <option value="" disabled selected>Sortieren</option>
+            <option value="hochsteigend">hochsteigend</option>
+            <option value="absteigend">absteigend</option>
+            <option value="Bewertung">Bewertung</option>
           </select>
         </div>
         <div class="bucher">

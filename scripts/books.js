@@ -2,24 +2,32 @@ function RenderBucher() {
     const Wrapper = document.querySelector('.bucher')       
     const Bucher = getBooks()
 
-    Wrapper.innerHTML = `<div class="buch">
-    <figure class="buch__img--wrapper">
-      <img class="buch__img" src="${Bucher[0].url}" alt="">
-    </figure>
-    <div class="buch__titel">
-    ${Bucher[0].title}
-    </div>
-    <div class="buch__ratings">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star-half-alt"></i> 
-    </div>
-    <div class="buch__preis">
-      <span class="buch__preis--normal">€${Bucher[0].originalPreis}</span> €${Bucher[0].salePreis}
-    </div>
-  </div>`
+    const BucherHtml = Bucher.map(buch => {
+      return `<div class="buch">
+      <figure class="buch__img--wrapper">
+        <img class="buch__img" src="${buch.url}" alt="">
+      </figure>
+      <div class="buch__titel">
+      ${buch.title}
+      </div>
+      <div class="buch__ratings">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i> 
+      </div>
+      <div class="buch__preis">
+        <span>€${buch.originalPreis.toFixed(2)}</span>
+      </div>
+    </div>`
+    }).join('')
+
+    Wrapper.innerHTML = BucherHtml
+}
+
+function BuchFilter() {
+  console.log('Ok')
 }
 
 setTimeout(() => {
