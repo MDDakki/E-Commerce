@@ -26,8 +26,10 @@ function RenderBucher() {
     Wrapper.innerHTML = BucherHtml
 }
 
-function BuchFilter() {
-  console.log('Ok')
+function BuchFilter(event) {
+  if (event.target.value === "absteigend") {
+    console.log("Preis Ist Absteigend")
+  }
 }
 
 setTimeout(() => {
