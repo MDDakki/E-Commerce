@@ -1,14 +1,18 @@
-function RenderBucher(filter) {
-  const Wrapper = document.querySelector(".bucher");
-  const Bucher = getBooks();
+const Wrapper = document.querySelector(".bucher");
+const Bucher = getBooks();
 
+function RenderBucher(filter) {
   if (filter === "absteigend") {
     Bucher.sort((a, b) => {
-      return a.originalPreis - b.originalPreis;
+      return (
+        (a.salePreis || a.originalPreis) - (b.salePreis || b.originalPreis)
+      );
     });
   } else if (filter === "hochsteigend") {
     Bucher.sort((a, b) => {
-      return b.originalPreis - a.originalPreis;
+      return (
+        (b.salePreis || b.originalPreis) - (a.salePreis || a.originalPreis)
+      );
     });
     // Nach Bewertung sortieren
   } else if (filter === "Bewertung") {
@@ -29,7 +33,7 @@ function RenderBucher(filter) {
       ${Sterne(buch.rating)}
       </div>
       <div class="buch__preis">
-        <span>€${buch.originalPreis.toFixed(2)}</span>
+        <span>${CheckAngebot(buch.originalPreis, buch.salePreis)}</span>
       </div>
     </div>`;
   }).join("");
@@ -39,6 +43,15 @@ function RenderBucher(filter) {
 
 function BuchFilter(event) {
   RenderBucher(event.target.value);
+}
+
+function CheckAngebot(OriginalPreis, SalePreis) {
+  if (!SalePreis) {
+    return `${OriginalPreis.toFixed(2)}€`;
+  }
+  return `<span class="buch__preis--normal">${OriginalPreis.toFixed(
+    2
+  )}€</span> ${SalePreis.toFixed(2)}€`;
 }
 
 function Sterne(rating) {
