@@ -1,11 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="scripts/books.js" defer></script>
+  <script src="scripts/menu.js" defer></script>
+  <title>Bücher</title>
 </head>
-<body>
-  
+
+<body id="books__body">
+  <section>
+    <nav>
+      <div class="nav__container">
+        <img class="logo" src="assets/Library.svg" alt="">
+        <ul class="nav__links">
+          <li><a href="#" class="nav__link">Home</a></li>
+          <li><a href="#" class="nav__link">Kontakt</a></li>
+          <li><a href="#" class="nav__link nav__link--primary">Bücher</a></li>
+        </ul>
+        <button class="taste__menu" onclick="openMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="taste__menu taste__menu--close" onclick="closeMenu()">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list">
+              <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+            </li>
+            <li class="menu__list">
+              <a href="#features" class="menu__link" onclick="closeMenu()">Bücher</a>
+            </li>
+            <li class="menu__list">
+              <a class="menu__link no-cursor" onclick="closeMenu()">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <main id="books__main">
+    <section>
+      <div class="container">
+        <div class="row">
+          <h2 class="section__titel books__header--titel>
+            All <span class="purple">Bücher</span>
+          </h2>
+          <div class="buch">
+            <figure class="buch__img--wrapper">
+              <img class="buch__img" src="assets/atomic habits.jpg" alt="">
+            </figure>
+            <div class="buch__titel">
+              Atomic Habits
+            </div>
+            <div class="buch__ratings">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="buch__preis">
+              <span class="buch__preis--normal">$59.95</span> $14.95
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row row__column">
+        <a href="#">
+          <figure class="footer__logo">
+            <img src="assets/Library.svg" class="footer__logo--img" alt="">
+          </figure>
+        </a>
+        <div class="footer__list">
+          <a href="#Landung" class="footer__link">Home</a>
+          <a href="#highlights" class="footer__link">Über</a>
+          <a href="#features" class="footer__link">Bücher</a>
+          <a href="mailto:mohammadddakki@gmail.com" class="footer__link">Kontakt</a>
+      </div>
+      <div class="footer__copyright">Copyright &copy; 2023 Bibliothek</div>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
