@@ -51,20 +51,20 @@
         <div class="row">
           <div class="buch__header">
             <div class="text__header">
-            <h2 class="section__titel buch__header--titel">
-              Alle <span class="purple">Bücher</span>
-            </h2>
-        </div>
-          <select id="filter" onchange="BuchFilter(event)">
-            <option value="" disabled selected>Sortieren</option>
-            <option value="hochsteigend">hochsteigend</option>
-            <option value="absteigend">absteigend</option>
-            <option value="Bewertung">Bewertung</option>
-          </select>
-        </div>
-        <div class="bucher">
-          
-        </div>
+              <h2 class="section__titel buch__header--titel">
+                Alle <span class="purple">Bücher</span>
+              </h2>
+            </div>
+            <select id="filter" onchange="BuchFilter(event)">
+              <option value="" disabled selected>Sortieren</option>
+              <option value="hochsteigend">Preis, hochsteigend</option>
+              <option value="absteigend">Preis, absteigend</option>
+              <option value="Bewertung">Bewertung</option>
+            </select>
+          </div>
+          <div class="bucher">
+            <i class="fas fa-spinner bucher__laden--spinner"></i>
+          </div>
         </div>
       </div>
     </section>
@@ -83,8 +83,8 @@
           <a href="#highlights" class="footer__link">Über</a>
           <a href="#features" class="footer__link">Bücher</a>
           <a href="mailto:mohammadddakki@gmail.com" class="footer__link">Kontakt</a>
-      </div>
-      <div class="footer__copyright">Copyright &copy; 2023 Bibliothek</div>
+        </div>
+        <div class="footer__copyright">Copyright &copy; 2023 Bibliothek</div>
       </div>
     </div>
   </footer>
